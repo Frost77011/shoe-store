@@ -24,7 +24,7 @@
       </div>
 
 
-      <a href="browse" class="storeButton"><span>Full Store</span></a>
+      <router-link to="/Browse"><div class="storeButton"><span>Full Store</span></div></router-link>
     
 </div>
 </template>

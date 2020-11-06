@@ -14,7 +14,7 @@
           </div>
         </div>
       </div>
-      <a href="browse" class="storeButton"><span>Return to Store</span></a>
+      <router-link to="/Browse"><div class="storeButton"><span>Back to Browse</span></div></router-link>
 </div>
 </template>
 

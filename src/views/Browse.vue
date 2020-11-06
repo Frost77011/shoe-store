@@ -8,7 +8,6 @@
     </div>
   </div>
   <ProductList :products="products"/>
-  <footer>https://github.com/</footer>
 </div>
 
 </template>

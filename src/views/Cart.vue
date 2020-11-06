@@ -7,7 +7,6 @@
     <div v-else>
         <CartList :products="products" />
     </div>
-    <footer>https://github.com/</footer>
 </div>
 </template>
 
