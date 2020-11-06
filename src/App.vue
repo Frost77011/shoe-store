@@ -1,12 +1,53 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+<div id="app">
+  <div id="menu">
+    <div id="brand">
+      <router-link to="/">
+        <h1>FrostedBacon Store</h1>
+      </router-link>
     </div>
-    <router-view/>
+    <div id="left">
+      <router-link to="/browse">
+        <div class="menu-item browse">
+          <h2>Browse</h2>
+        </div>
+      </router-link>
+    </div>
+    <div id="side">
+      <div v-if="emptyCart">
+        <router-link to="/cart">
+          <div class="menu-item">
+            <h2>Your Cart: {{cart}}</h2>
+          </div>
+        </router-link>
+      </div>
+    </div>
   </div>
+  <router-view />
+</div>
 </template>
+
+
+<script>
+export default {
+  computed: {
+    cart() {
+      return this.$root.$data.cartSize;
+    },
+    emptyCart() {
+      if(this.$root.$data.cartSize > 0) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+  
+  },
+}
+</script>
+
+
+
 
 <style>
 #app {
@@ -29,4 +70,10 @@
 #nav a.router-link-exact-active {
   color: #42b983;
 }
+
+#left{
+  text-align: left;
+}
+
+
 </style>

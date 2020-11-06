@@ -1,6 +1,12 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import Browse from '../views/Browse.vue'
+import Cart from '../views/Cart.vue'
+import ULTRABOOST20 from '../views/products/ULTRABOOST20'
+import X9000L4 from '../views/products/X9000L4'
+import PUREMOTION from '../views/products/PUREMOTION'
+import NMDR1 from '../views/products/NMDR1'
 
 Vue.use(VueRouter)
 
@@ -11,12 +17,34 @@ const routes = [
     component: Home
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    path: '/browse',
+    name: 'Browse',
+    component: Browse
+  },
+  {
+    path: '/cart',
+    name: 'Cart',
+    component: Cart
+  },
+  {
+    path: '/ULTRABOOST20',
+    name: 'ULTRABOOST20',
+    component: ULTRABOOST20
+  },
+  {
+    path: '/X9000L4',
+    name: 'X9000L4',
+    component: X9000L4
+  },
+  {
+    path: '/PUREMOTION',
+    name: 'PUREMOTION',
+    component: PUREMOTION
+  },
+  {
+    path: '/NMDR1',
+    name: 'NMDR1',
+    component: NMDR1
   }
 ]
 
